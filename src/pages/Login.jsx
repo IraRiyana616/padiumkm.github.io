@@ -48,7 +48,7 @@ const Login = () => {
   return (
     <div className="relative flex flex-row flex-wrap justify-between w-full bg-gray-200 ">
       <section className=" w-full md:relative md:overflow max-w-full mx-auto lg:py-10 ">
-        <div className="flex justify-center items-center lg:h-screen bg-login-wrapper pt-20">
+        <div className="flex justify-center items-center lg:h-screen bg-login-wrapper pt-16 ">
           <div className="max-w-screen-lg w-full bg-white rounded-lg lg:flex  ">
             <div className="flex flex-col justify-center items-center w-full h-screen lg:h-full p-10">
               <div className="w-full">
