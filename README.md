@@ -1,8 +1,9 @@
-# React + Vite
+# Landing Page PaDi UMKM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Case Study : Landing Page PaDi UMKM
+Anggota Kelompok 8 terdiri dari :
+1. Aurani Azalia (Hustler)
+2. Jasmine Asyifania (Hipster)
+3. Reza Pahlevi (Hipster
+4. Ira Riyana Sari Siregar (Hacker Front-End)
+5. Rayyan Nasution (Hacker Back-End)
