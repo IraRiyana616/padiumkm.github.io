@@ -4,15 +4,19 @@ export default {
   theme: {
     extend: {
       height: {
-        'custom-height': '940px',
+        'custom-960': '990px',
+        'custom-820': '820px',
+        'custom-780': '780px',
         'custom-600': '600px',
         'custom-700': '700px',
-        'custom-350': '350px',
+        'custom-550': '550px',
+        'custom-250': '330px',
         'custom-100': '100px',
       },
       width: {
         'custom-450': '450px',
-        'custom-350': '350px',
+        'custom-550': '550px',
+        'custom-250': '330px',
       },
 
       colors: {

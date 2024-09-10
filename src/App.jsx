@@ -1,19 +1,13 @@
 import './App.css';
-import Register from './pages/register/Register';
-import RegisterRole from '/src/pages/register/RegisterRole';
-import RegisterForm from './pages/register/role/RegisterForm';
-import ForgotPassword from './pages/forget-password/ForgotPassword';
-import Login from '/src/pages/Login';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './router/AppRouter';
 
 function App() {
   return (
-    <>
-      {/* <Register /> */}
-      {/* <RegisterRole /> */}
-      {/* <RegisterForm /> */}
-      {/* <Login /> */}
-      <ForgotPassword />
-    </>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 

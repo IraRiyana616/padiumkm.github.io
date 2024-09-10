@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ValidationPassword from '/src/components/forgot-password/ValidationPassword';
-import customerCareIcon from '/src/assets/icons/customer.svg';
+import FloatingButton from '../../components/FloatingButton';
 
 const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState('');
@@ -83,14 +83,7 @@ const ForgotPassword = () => {
             </div>
           </div>
 
-          <div className="fixed bottom-3.5 right-8 flex items-center bg-secondary0 text-white rounded-xl shadow-lg p-3 cursor-pointer">
-            <img
-              className="w-10 h-10 mr-2 m-0"
-              src={customerCareIcon}
-              alt="Customer Care Icon"
-            />
-            <span className="font-bold text-primary60 m-0">Customer Care</span>
-          </div>
+          <FloatingButton />
         </div>
       </div>
     </div>
