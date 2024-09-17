@@ -10,7 +10,12 @@ import healthy from '/src/assets/icons/kesehatan.svg';
 import food from '/src/assets/icons/makanan.svg';
 import product from '/src/assets/icons/semua.svg';
 import CategoryButton from '/src/components/landing-page/CategoryButton';
-import Header from '../components/landing-page/Header';
+import Header from '/src/components/landing-page/Header';
+import ProductCard from '/src/components/landing-page/ProductCard';
+import diskonBanner from '/src/assets/images/diskon-banner.svg';
+import BannerSection from '../components/landing-page/BannerSection';
+import smallBanner4 from '/src/assets/images/small-banner(3).svg';
+import smallBanner5 from '/src/assets/images/small-banner(4).svg';
 
 const LandingPage = () => {
   return (
@@ -18,7 +23,8 @@ const LandingPage = () => {
       <Header />
       <div className="min-h-screen overflow-hidden">
         <div className="relative max-w-screen-2xl mx-auto mt-5">
-          <div className="flex flex-col  w-full">
+          <div className="flex flex-col w-full">
+            {/* Banner section */}
             <div className="relative w-full">
               <img src={banner1} alt="banner" className="mx-auto" />
               <button className="absolute top-64 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary70 text-white px-4 py-2 rounded-full w-56">
@@ -26,8 +32,9 @@ const LandingPage = () => {
               </button>
             </div>
 
-            <div className="flex flex-col container-layout p-10 ">
-              <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start ">
+            {/* Kategori Produk */}
+            <div className="flex flex-col container-layout p-10">
+              <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
                 <div className="text-custom-24 font-bold font-nunito">
                   Kategori Produk
                 </div>
@@ -46,7 +53,7 @@ const LandingPage = () => {
                 />
                 <CategoryButton
                   src={tools}
-                  alt="alat-tulis"
+                  alt="alat tulis"
                   text="Alat Tulis"
                 />
                 <CategoryButton src={book} alt="buku" text="Buku" />
@@ -61,13 +68,19 @@ const LandingPage = () => {
                   text="Kesehatan"
                 />
                 <CategoryButton src={food} alt="makanan" text="Makanan" />
-                <CategoryButton src={product} alt="semua" text="Semua" />
+                <CategoryButton
+                  src={product}
+                  alt="semua kategori"
+                  text="Semua"
+                />
               </div>
             </div>
+
+            {/* Flash Sale Section */}
             <div className="flex flex-col items-start w-full px-10 space-y-8">
               <div className="flex items-center w-full justify-between">
                 <div className="text-lg lg:text-custom-24 font-semibold font-nunito">
-                  Flash sale hari ini
+                  Flash Sale Hari Ini
                 </div>
                 <a href="#">
                   <div className="flex items-center space-x-1 lg:space-x-3 lg:ml-8 cursor-pointer">
@@ -90,166 +103,50 @@ const LandingPage = () => {
                   </div>
                 </a>
               </div>
-              <div className="h-80 justify-start items-center gap-6 inline-flex">
-                <div className="Card w-60 rounded-xl shadow flex-col justify-start items-start inline-flex">
-                  <img
-                    className="Image self-stretch h-36 rounded-tl-xl rounded-tr-xl"
-                    src="https://via.placeholder.com/234x140"
-                  />
-                  <div className="Frame73 self-stretch h-48 p-4 bg-white rounded-bl-xl rounded-br-xl flex-col justify-center items-start gap-1 flex">
-                    <div className="NamaProdukMinimal2Line self-stretch text-black text-lg font-semibold font-['Nunito Sans'] leading-7">
-                      Stapler Besar BANTEX Warna White
-                    </div>
-                    <div className="Rp30000 self-stretch text-cyan-700 text-lg font-bold font-['Nunito Sans'] leading-7">
-                      Rp141.900
-                    </div>
-                    <div className="Frame25 self-stretch justify-start items-center gap-2.5 inline-flex">
-                      <div className="Rp30000 text-neutral-400 text-sm font-semibold font-['Nunito Sans'] line-through leading-tight">
-                        Rp 30.000
-                      </div>
-                      <div className="50 text-cyan-600 text-xs font-normal font-['Nunito Sans'] leading-none">
-                        -50%
-                      </div>
-                    </div>
-                    <div className="Frame18 w-28 h-4 justify-start items-center gap-px inline-flex">
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                    </div>
-                    <div className="Terjual789 self-stretch text-neutral-400 text-sm font-semibold font-['Nunito Sans'] leading-tight">
-                      Terjual 789
-                    </div>
-                  </div>
+              <ProductCard />
+            </div>
+            <div className="relative w-full">
+              <div className="flex justify-between items-center space-x-4 p-4 w-full mb-56">
+                <img
+                  src={diskonBanner}
+                  alt="diskon banner"
+                  className="ml-4 w-98px h-55px"
+                />
+              </div>
+
+              {/* ProductCard */}
+              <div className="absolute top-52 left-8  w-full h-full">
+                <ProductCard />
+              </div>
+            </div>
+            <BannerSection />
+            <div className="mt-10 px-10 space-y-8">
+              <ProductCard />
+              <ProductCard />
+            </div>
+            <div className="flex justify-between items-center px-10 mb-7 w-full">
+              <div className="relative inline-block">
+                <img
+                  src={smallBanner4}
+                  alt="small banner 4"
+                  className="border-1 rounded-lg shadow-md"
+                />
+                <div className="absolute bottom-7 left-7 h-9 px-9 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
+                  <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
+                    Ajukan Sekarang!
+                  </button>
                 </div>
-                <div className="Card w-60 rounded-xl shadow flex-col justify-start items-start inline-flex">
-                  <img
-                    className="Image self-stretch h-36 rounded-tl-xl rounded-tr-xl"
-                    src="https://via.placeholder.com/234x140"
-                  />
-                  <div className="Frame73 self-stretch h-48 p-4 bg-white rounded-bl-xl rounded-br-xl flex-col justify-center items-start gap-1 flex">
-                    <div className="NamaProdukMinimal2Line self-stretch text-black text-lg font-semibold font-['Nunito Sans'] leading-7">
-                      Post It Sign Here Posi - 3M 1 Box (Isi 12 Pcs)
-                    </div>
-                    <div className="Rp30000 self-stretch text-cyan-700 text-lg font-bold font-['Nunito Sans'] leading-7">
-                      Rp285.000
-                    </div>
-                    <div className="Frame25 self-stretch justify-start items-center gap-2.5 inline-flex">
-                      <div className="Rp30000 text-neutral-400 text-sm font-semibold font-['Nunito Sans'] line-through leading-tight">
-                        Rp 30.000
-                      </div>
-                      <div className="50 text-cyan-600 text-xs font-normal font-['Nunito Sans'] leading-none">
-                        -50%
-                      </div>
-                    </div>
-                    <div className="Frame18 w-28 h-4 justify-start items-center gap-px inline-flex">
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                    </div>
-                    <div className="Terjual789 self-stretch text-neutral-400 text-sm font-semibold font-['Nunito Sans'] leading-tight">
-                      Terjual 789
-                    </div>
-                  </div>
-                </div>
-                <div className="Card w-60 rounded-xl shadow flex-col justify-start items-start inline-flex">
-                  <img
-                    className="Image self-stretch h-36 rounded-tl-xl rounded-tr-xl"
-                    src="https://via.placeholder.com/234x140"
-                  />
-                  <div className="Frame73 self-stretch h-48 p-4 bg-white rounded-bl-xl rounded-br-xl flex-col justify-center items-start gap-1 flex">
-                    <div className="NamaProdukMinimal2Line self-stretch text-black text-lg font-semibold font-['Nunito Sans'] leading-7">
-                      BALLPOINT TRIFELO BP-316/317
-                    </div>
-                    <div className="Rp30000 self-stretch text-cyan-700 text-lg font-bold font-['Nunito Sans'] leading-7">
-                      Rp6.700
-                    </div>
-                    <div className="Frame25 self-stretch justify-start items-center gap-2.5 inline-flex">
-                      <div className="Rp30000 text-neutral-400 text-sm font-semibold font-['Nunito Sans'] line-through leading-tight">
-                        Rp 30.000
-                      </div>
-                      <div className="50 text-cyan-600 text-xs font-normal font-['Nunito Sans'] leading-none">
-                        -50%
-                      </div>
-                    </div>
-                    <div className="Frame18 w-28 h-4 justify-start items-center gap-px inline-flex">
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                    </div>
-                    <div className="Terjual789 self-stretch text-neutral-400 text-sm font-semibold font-['Nunito Sans'] leading-tight">
-                      Terjual 789
-                    </div>
-                  </div>
-                </div>
-                <div className="Card w-60 rounded-xl shadow flex-col justify-start items-start inline-flex">
-                  <img
-                    className="Image self-stretch h-36 rounded-tl-xl rounded-tr-xl"
-                    src="https://via.placeholder.com/234x140"
-                  />
-                  <div className="Frame73 self-stretch h-48 p-4 bg-white rounded-bl-xl rounded-br-xl flex-col justify-center items-start gap-1 flex">
-                    <div className="NamaProdukMinimal2Line self-stretch text-black text-lg font-semibold font-['Nunito Sans'] leading-7">
-                      Corporate gift box set Tumbler & muq
-                    </div>
-                    <div className="Rp30000 self-stretch text-cyan-700 text-lg font-bold font-['Nunito Sans'] leading-7">
-                      Rp250.000
-                    </div>
-                    <div className="Frame25 self-stretch justify-start items-center gap-2.5 inline-flex">
-                      <div className="Rp30000 text-neutral-400 text-sm font-semibold font-['Nunito Sans'] line-through leading-tight">
-                        Rp 30.000
-                      </div>
-                      <div className="50 text-cyan-600 text-xs font-normal font-['Nunito Sans'] leading-none">
-                        -50%
-                      </div>
-                    </div>
-                    <div className="Frame18 w-28 h-4 justify-start items-center gap-px inline-flex">
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                    </div>
-                    <div className="Terjual789 self-stretch text-neutral-400 text-sm font-semibold font-['Nunito Sans'] leading-tight">
-                      Terjual 789
-                    </div>
-                  </div>
-                </div>
-                <div className="Card w-60 rounded-xl shadow flex-col justify-start items-start inline-flex">
-                  <img
-                    className="Image self-stretch h-36 rounded-tl-xl rounded-tr-xl"
-                    src="https://via.placeholder.com/234x140"
-                  />
-                  <div className="Frame73 self-stretch h-48 p-4 bg-white rounded-bl-xl rounded-br-xl flex-col justify-center items-start gap-1 flex">
-                    <div className="NamaProdukMinimal2Line self-stretch text-black text-lg font-semibold font-['Nunito Sans'] leading-7">
-                      Payung Custom JM Tipe 245J
-                    </div>
-                    <div className="Rp30000 self-stretch text-cyan-700 text-lg font-bold font-['Nunito Sans'] leading-7">
-                      Rp70.000
-                    </div>
-                    <div className="Frame25 self-stretch justify-start items-center gap-2.5 inline-flex">
-                      <div className="Rp30000 text-neutral-400 text-sm font-semibold font-['Nunito Sans'] line-through leading-tight">
-                        Rp 30.000
-                      </div>
-                      <div className="50 text-cyan-600 text-xs font-normal font-['Nunito Sans'] leading-none">
-                        -50%
-                      </div>
-                    </div>
-                    <div className="Frame18 w-28 h-4 justify-start items-center gap-px inline-flex">
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                      <div className="Star w-5 h-5 px-0.5 py-0.5 justify-center items-center flex" />
-                    </div>
-                    <div className="Terjual789 self-stretch text-neutral-400 text-sm font-semibold font-['Nunito Sans'] leading-tight">
-                      Terjual 789
-                    </div>
-                  </div>
+              </div>
+              <div className="relative inline-block">
+                <img
+                  src={smallBanner5}
+                  alt="small banner 5"
+                  className="border-1 rounded-lg shadow-md"
+                />
+                <div className="absolute bottom-7 left-7 h-9 px-9 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
+                  <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
+                    Ajukan Sekarang!
+                  </button>
                 </div>
               </div>
             </div>

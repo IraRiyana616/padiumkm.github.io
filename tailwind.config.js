@@ -29,6 +29,7 @@ export default {
         primary50: '#0092AC',
         textColor: '#667085',
         tertiary80: '#2E3032',
+        tertiary60: '#8C8F93',
         secondary0: '#FAFBFD',
         borderCard: {
           textFieldBorder: '#474D66',
@@ -40,6 +41,7 @@ export default {
         'custom-18': '18px',
         'custom-16': '16px',
         'custom-14': '14px',
+        'custom-13': '13px',
         'custom-12': '12px',
       },
       fontFamily: {
