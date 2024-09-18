@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import banner1 from '/src/assets/images/slide.svg';
 import diskon from '/src/assets/icons/diskon.svg';
 import electronic from '/src/assets/icons/eletronic.svg';
@@ -14,10 +14,18 @@ import Header from '/src/components/landing-page/Header';
 import ProductCard from '/src/components/landing-page/ProductCard';
 import diskonBanner from '/src/assets/images/diskon-banner.svg';
 import BannerSection from '../components/landing-page/BannerSection';
-import smallBanner4 from '/src/assets/images/small-banner(3).svg';
-import smallBanner5 from '/src/assets/images/small-banner(4).svg';
+import Banner from '../components/landing-page/Banner';
+import FloatingButton from '../components/FloatingButton';
+import Footer from '../components/footer/Footer';
 
 const LandingPage = () => {
+  // State untuk mengontrol apakah teks ditampilkan
+  const [showText, setShowText] = useState(false);
+
+  // Fungsi untuk mengubah state saat SVG diklik
+  const handleClick = () => {
+    setShowText(!showText); // Mengubah nilai state setiap kali diklik
+  };
   return (
     <div className="overflow-auto zoom-100">
       <Header />
@@ -113,8 +121,6 @@ const LandingPage = () => {
                   className="ml-4 w-98px h-55px"
                 />
               </div>
-
-              {/* ProductCard */}
               <div className="absolute top-52 left-8  w-full h-full">
                 <ProductCard />
               </div>
@@ -124,35 +130,172 @@ const LandingPage = () => {
               <ProductCard />
               <ProductCard />
             </div>
-            <div className="flex justify-between items-center px-10 mb-7 w-full">
-              <div className="relative inline-block">
-                <img
-                  src={smallBanner4}
-                  alt="small banner 4"
-                  className="border-1 rounded-lg shadow-md"
-                />
-                <div className="absolute bottom-7 left-7 h-9 px-9 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
-                  <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
-                    Ajukan Sekarang!
-                  </button>
+            <Banner />
+            <div className="text-center text-custom-24 font-nunito font-bold mt-10">
+              Frequently Asked Question
+            </div>
+            <div className="container-layout py-4 px-10 mt-8">
+              <div className="border-[1px] rounded-2xl divide-y-[1px]">
+                <div className="p-6 space-y-6 cursor-pointer">
+                  <div className="flex justify-between items-center">
+                    <h2 className="font-semibold cursor-pointer">
+                      Pengadaan Barang dan Jasa Pemerintah di Marketplace PaDi
+                      UMKM
+                    </h2>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      className="cursor-pointer"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={handleClick}>
+                      <path
+                        d={
+                          showText
+                            ? 'M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z' // Arrow up
+                            : 'M207.029 130.524L12.686 324.868c-9.373 9.373-9.373 24.569 0 33.941l22.667 22.667c9.357 9.357 24.522 9.375 33.901.04L224 227.495l154.745 154.021c9.379 9.335 24.544 9.317 33.901-.04l22.667-22.667c9.373-9.373 9.373-24.569 0-33.941L240.971 130.524c-9.373-9.372-24.569-9.372-33.942 0z' // Arrow down
+                        }></path>
+                    </svg>
+                  </div>
+                  {!showText && (
+                    <div className="text-custom-14 text-tertiary60">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  )}
                 </div>
-              </div>
-              <div className="relative inline-block">
-                <img
-                  src={smallBanner5}
-                  alt="small banner 5"
-                  className="border-1 rounded-lg shadow-md"
-                />
-                <div className="absolute bottom-7 left-7 h-9 px-9 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
-                  <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
-                    Ajukan Sekarang!
-                  </button>
+
+                <div className="p-6 space-y-6 cursor-pointer">
+                  <div className="flex justify-between items-center">
+                    <h2 className="font-semibold cursor-pointer">
+                      Pengadaan Barang dan Jasa Pemerintah di Marketplace PaDi
+                      UMKM
+                    </h2>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      className="cursor-pointer"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={handleClick}>
+                      <path
+                        d={
+                          showText
+                            ? 'M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z' // Arrow up
+                            : 'M207.029 130.524L12.686 324.868c-9.373 9.373-9.373 24.569 0 33.941l22.667 22.667c9.357 9.357 24.522 9.375 33.901.04L224 227.495l154.745 154.021c9.379 9.335 24.544 9.317 33.901-.04l22.667-22.667c9.373-9.373 9.373-24.569 0-33.941L240.971 130.524c-9.373-9.372-24.569-9.372-33.942 0z' // Arrow down
+                        }></path>
+                    </svg>
+                  </div>
+
+                  {!showText && (
+                    <div className="text-custom-14 text-tertiary60">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 space-y-6 cursor-pointer">
+                  <div className="flex justify-between items-center">
+                    <h2 className="font-semibold cursor-pointer">
+                      Pengadaan Barang dan Jasa Pemerintah di Marketplace PaDi
+                      UMKM
+                    </h2>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      className="cursor-pointer"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={handleClick}>
+                      <path
+                        d={
+                          showText
+                            ? 'M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z' // Arrow up
+                            : 'M207.029 130.524L12.686 324.868c-9.373 9.373-9.373 24.569 0 33.941l22.667 22.667c9.357 9.357 24.522 9.375 33.901.04L224 227.495l154.745 154.021c9.379 9.335 24.544 9.317 33.901-.04l22.667-22.667c9.373-9.373 9.373-24.569 0-33.941L240.971 130.524c-9.373-9.372-24.569-9.372-33.942 0z' // Arrow down
+                        }></path>
+                    </svg>
+                  </div>
+
+                  {!showText && (
+                    <div className="text-custom-14 text-tertiary60">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 space-y-6 cursor-pointer">
+                  <div className="flex justify-between items-center">
+                    <h2 className="font-semibold cursor-pointer">
+                      Pengadaan Barang dan Jasa Pemerintah di Marketplace PaDi
+                      UMKM
+                    </h2>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      className="cursor-pointer"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={handleClick}>
+                      <path
+                        d={
+                          showText
+                            ? 'M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z' // Arrow up
+                            : 'M207.029 130.524L12.686 324.868c-9.373 9.373-9.373 24.569 0 33.941l22.667 22.667c9.357 9.357 24.522 9.375 33.901.04L224 227.495l154.745 154.021c9.379 9.335 24.544 9.317 33.901-.04l22.667-22.667c9.373-9.373 9.373-24.569 0-33.941L240.971 130.524c-9.373-9.372-24.569-9.372-33.942 0z' // Arrow down
+                        }></path>
+                    </svg>
+                  </div>
+
+                  {!showText && (
+                    <div className="text-custom-14 text-tertiary60">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* <FloatingButton /> */}
+      <Footer />
     </div>
   );
 };
