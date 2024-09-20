@@ -8,11 +8,11 @@ const BannerSection = () => {
     <div className="flex justify-between items-center px-10 mb-7 w-full">
       <div className="relative inline-block">
         <img
-          src={smallBanner1}
+          src={smallBanner2}
           alt="small banner 1"
           className="border-1 rounded-lg shadow-md"
         />
-        <div className="absolute bottom-12 left-7 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
+        <div className="absolute bottom-8 left-7 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
           <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
             Ajukan Sekarang!
           </button>
@@ -20,11 +20,11 @@ const BannerSection = () => {
       </div>
       <div className="relative inline-block">
         <img
-          src={smallBanner2}
+          src={smallBanner1}
           alt="small banner 2"
           className="border-1 rounded-lg shadow-md"
         />
-        <div className="absolute bottom-11 left-48 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
+        <div className="absolute bottom-8 left-48 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
           <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
             Ajukan Sekarang!
           </button>
@@ -36,7 +36,7 @@ const BannerSection = () => {
           alt="small banner 3"
           className="border-1 rounded-lg shadow-md"
         />
-        <div className="absolute bottom-11 left-8 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
+        <div className="absolute bottom-8 left-8 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
           <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
             Ajukan Sekarang!
           </button>

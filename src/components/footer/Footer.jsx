@@ -22,49 +22,79 @@ import applestore from '/src/assets/icons/apple-store.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 mt-12 flex-col items-center">
+    <footer className="bg-gray-100 mt-12 flex-col items-center">
       <div className="text-center xl:flex xl:text-left py-10 px-5 ">
         <div className="flex flex-col space-y-6 text-center md:space-y-0 md:text-left md:flex-row xl:pr-[100px] xl:space-y-0 xl:text-left">
           <div className="w-full flex flex-col space-y-5 px-12 text-center xl:text-left xl:w-fit">
-            <div className="text-xl font-bold font-nunito ">Informasi</div>
+            <div className="text-custom-24 font-bold font-nunito text-gray-400">
+              Informasi
+            </div>
             <div className="space-y-3 whitespace-nowrap">
-              <div className="cursor-pointer text-sm">Tentang Kami</div>
+              <div className="cursor-pointer text-custom-15 text-tertiary60">
+                Tentang Kami
+              </div>
               <a href="#">
-                <div className="cursor-pointer text-sm">Syarat & Ketentuan</div>
+                <div className="cursor-pointer text-custom-14 text-tertiary60">
+                  Syarat & Ketentuan
+                </div>
               </a>
               <a href="#">
-                <div className="cursor-pointer text-sm">Kebijakan Privasi</div>
+                <div className="cursor-pointer text-custom-14 text-tertiary60">
+                  Kebijakan Privasi
+                </div>
               </a>
               <a href="#">
-                <div className="cursor-pointer text-sm">Finance</div>
+                <div className="cursor-pointer text-custom-14 text-tertiary60">
+                  Finance
+                </div>
               </a>
               <a href="#">
-                <div className="cursor-pointer text-sm">FAQ</div>
+                <div className="cursor-pointer text-custom-14 text-tertiary60">
+                  FAQ
+                </div>
               </a>
             </div>
           </div>
 
           <div className="w-full flex flex-col space-y-5 px-20 text-center xl:text-left xl:w-fit">
-            <div className="text-xl font-bold font-nunito">Penjual</div>
+            <div className="text-custom-24 font-bold font-nunito text-gray-400">
+              Penjual
+            </div>
             <div className="space-y-0 whitespace-nowrap">
-              <div className="text-sm cursor-pointer">Panduan Penjual</div>
-              <div className="text-sm cursor-pointer">Informasi Tender</div>
-              <div className="text-sm cursor-pointer">Control Tower</div>
+              <div className="cursor-pointer text-custom-14 text-tertiary60">
+                Panduan Penjual
+              </div>
+              <div className="cursor-pointer text-custom-14 text-tertiary60">
+                Informasi Tender
+              </div>
+              <div className="cursor-pointer text-custom-14 text-tertiary60">
+                Control Tower
+              </div>
             </div>
           </div>
 
           <div className="w-full flex flex-col space-y-5 px-20 text-center xl:text-left xl:w-fit">
-            <div className="text-xl font-bold font-nunito">Pembeli</div>
+            <div className="text-custom-24 font-bold font-nunito text-gray-400">
+              Pembeli
+            </div>
             <div className="space-y-0 whitespace-nowrap">
-              <div className="text-sm cursor-pointer">Panduan Pembeli</div>
-              <div className="text-sm cursor-pointer">Metode Pembelian</div>
-              <div className="text-sm cursor-pointer">Tender Kilat</div>
+              <div className="cursor-pointer text-custom-14 text-tertiary60">
+                Panduan Pembeli
+              </div>
+              <div className="cursor-pointer text-custom-14 text-tertiary60">
+                Metode Pembelian
+              </div>
+              <div className="cursor-pointer text-custom-14 text-tertiary60">
+                Tender Kilat
+              </div>
             </div>
           </div>
         </div>
         <div className="w-full flex flex-col space-y-5 px-15 text-center xl:text-left xl:w-fit">
-          <div className="text-xl font-bold font-nunito">Hubungi Kami</div>
-          <div className="text-sm cursor-pointer">
+          <div className="text-custom-24 font-bold font-nunito text-gray-400">
+            Hubungi Kami
+          </div>
+          <div className="cursor-pointer text-custom-14 text-tertiary60">
             Gedung Telkom Divisi Digital Business & Technology
             <br />
             Jl. Prof. Dr. Soepomo No.139, RT.13/RW.2, Tebet Barat,
@@ -112,19 +142,19 @@ const Footer = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="text-sm font-semibold">
+            <div className="text-custom-16 font-semibold font-nunito text-gray-400">
               Layanan Pengaduan Konsumen
             </div>
-            <div className="text-sm font-semibold">PaDi UMKM</div>
+
             <div className="flex fivide-x-[1px] divide-palletteText-inactive justify-center xl:justify-start">
               <div className="flex items-center space-x-1 text-sm">
                 <img alt="email" width={24} height={24} src={email} />
-                <div className="text-sm">cs@padiumkm.id</div>
+                <div className="text-sm text-tertiary60">cs@padiumkm.id</div>
               </div>
             </div>
           </div>
           <div className="space-y-2">
-            <div className="text-sm font-semibold">
+            <div className="text-custom-14 font-semibold font-nunito text-gray-400">
               Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga
               Kementrian Perdagangan RI
             </div>
@@ -132,17 +162,19 @@ const Footer = () => {
           <div className="flex divide-x-[1px] divide-paletteText-inactive justify-center xl:justify-start">
             <div className="flex items-center pr-4 text-sm">
               <img alt="whatsapp" height={24} width={24} src={whatsapp} />
-              <div className="pl-1">+62 853 1111 1010</div>
+              <div className="pl-1 text-tertiary60">+62 853 1111 1010</div>
             </div>
             <div>|</div>
             <div className="flex items-center pl-4 space-x-1 text-sm">
               <img alt="email" height={24} width={24} src={email} />
-              <div className="text-sm">contact.us@kemendag.go.id</div>
+              <div className="text-sm text-tertiary60">
+                contact.us@kemendag.go.id
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-6 px-12 font-bold text-custom-24">
+      <div className="mt-6 px-12 font-bold text-custom-24 text-gray-400">
         Metode Pembayaran
       </div>
       <div className="flex cursor-pointer items-center space-x-8 py-5">
@@ -263,7 +295,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="mt-7 px-12 font-bold text-custom-24">
+      <div className="mt-7 px-12 font-bold text-custom-24 text-gray-400">
         Download Aplikasi
       </div>
       <div className="flex cursor-pointer items-center space-x-8 py-5 ">
@@ -285,6 +317,9 @@ const Footer = () => {
             src={applestore}
           />
         </div>
+      </div>
+      <div className="mt-20 flex justify-center items-center text-gray-500 text-custom-12 h-full">
+        ©2022-2025 Pasar Digital UMKM Indonesia
       </div>
     </footer>
   );

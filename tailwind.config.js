@@ -43,6 +43,7 @@ export default {
         'custom-14': '14px',
         'custom-13': '13px',
         'custom-12': '12px',
+        'custom-10': '10px',
       },
       fontFamily: {
         nunito: ['"Nunito Sans"', 'sans-serif'],

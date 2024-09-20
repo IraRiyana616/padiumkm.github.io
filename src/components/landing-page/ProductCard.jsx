@@ -9,11 +9,11 @@ const ProductCard = ({
   sold,
 }) => {
   return (
-    <div className="mb-10 ml-2">
+    <div className="mb-10 ml-2 shadow-lg rounded-b-xl ">
       <a href="#">
         <div className="Card w-56 rounded-xl shadow flex-col justify-start items-start inline-flex">
           <img
-            className="self-stretch h-36 rounded-tl-xl rounded-tr-xl"
+            className="self-stretch h-36 rounded-tl-xl rounded-tr-xl border-b-2 "
             src={imgSrc}
             alt={productName}
           />
@@ -32,8 +32,12 @@ const ProductCard = ({
                 {discountPercent}%
               </div>
             </div>
-            <div className="w-28 h-4 justify-start items-center gap-px inline-flex">
-              {/* Add stars or rating system here if needed */}
+            <div className="flex flex-row w-28 h-4 justify-start items-center gap-px inline-flex mt-2 mb-2">
+              <img src="/src/assets/icons/star.svg" />
+              <img src="/src/assets/icons/star.svg" />
+              <img src="/src/assets/icons/star.svg" />
+              <img src="/src/assets/icons/star.svg" />
+              <img src="/src/assets/icons/star-empty.svg" />
             </div>
             <div className="self-stretch text-tertiary60 text-custom-13 font-semibold font-nunito leading-tight">
               Terjual {sold}
@@ -48,7 +52,7 @@ const ProductCard = ({
 const ProductList = () => {
   const products = [
     {
-      imgSrc: 'https://via.placeholder.com/234x140',
+      imgSrc: '/src/assets/images/staples.png',
       productName: 'Stapler Besar BANTEX Warna White',
       price: '141.900',
       discountPrice: '30.000',
@@ -56,33 +60,33 @@ const ProductList = () => {
       sold: '789',
     },
     {
-      imgSrc: 'https://via.placeholder.com/234x140',
-      productName: 'Stapler Besar BANTEX Warna White',
-      price: '141.900',
+      imgSrc: '/src/assets/images/post-it.png',
+      productName: 'Post It Sign Here Posi - 3M 1 Box (Isi 12 pcs)',
+      price: '285.000',
       discountPrice: '30.000',
       discountPercent: '-50',
       sold: '789',
     },
     {
-      imgSrc: 'https://via.placeholder.com/234x140',
-      productName: 'Stapler Besar BANTEX Warna White',
-      price: '141.900',
+      imgSrc: '/src/assets/images/ballpoint.png',
+      productName: 'BALLPOINT TRIFELO BP-316/317',
+      price: '6.700',
       discountPrice: '30.000',
       discountPercent: '-50',
       sold: '789',
     },
     {
-      imgSrc: 'https://via.placeholder.com/234x140',
-      productName: 'Stapler Besar BANTEX Warna White',
-      price: '141.900',
+      imgSrc: '/src/assets/images/muq.png',
+      productName: 'Corporate gift box set Tumbler & muq',
+      price: '250.000',
       discountPrice: '30.000',
       discountPercent: '-50',
       sold: '789',
     },
     {
-      imgSrc: 'https://via.placeholder.com/234x140',
-      productName: 'Stapler Besar BANTEX Warna White',
-      price: '141.900',
+      imgSrc: '/src/assets/images/payung.png',
+      productName: 'Payung Custom JM Tipe 245J',
+      price: '70.000',
       discountPrice: '30.000',
       discountPercent: '-50',
       sold: '789',

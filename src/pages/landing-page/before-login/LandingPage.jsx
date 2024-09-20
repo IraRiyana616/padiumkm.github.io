@@ -10,21 +10,21 @@ import healthy from '/src/assets/icons/kesehatan.svg';
 import food from '/src/assets/icons/makanan.svg';
 import product from '/src/assets/icons/semua.svg';
 import CategoryButton from '/src/components/landing-page/CategoryButton';
-import Header from '/src/components/landing-page/Header';
+import Header from '/src/components/landing-page/header/before-login/Header';
 import ProductCard from '/src/components/landing-page/ProductCard';
+import ProductGreenEconomy from '/src/components/landing-page/ProductGreen';
+import ProductLocation from '/src/components/landing-page/ProductLocation';
 import diskonBanner from '/src/assets/images/diskon-banner.svg';
-import BannerSection from '../components/landing-page/BannerSection';
-import Banner from '../components/landing-page/Banner';
-import FloatingButton from '../components/FloatingButton';
-import Footer from '../components/footer/Footer';
+import BannerSection from '../../../components/landing-page/BannerSection';
+import Banner from '../../../components/landing-page/Banner';
+import FloatingButton from '../../../components/FloatingButton';
+import Footer from '../../../components/footer/Footer';
 
 const LandingPage = () => {
-  // State untuk mengontrol apakah teks ditampilkan
   const [showText, setShowText] = useState(false);
 
-  // Fungsi untuk mengubah state saat SVG diklik
   const handleClick = () => {
-    setShowText(!showText); // Mengubah nilai state setiap kali diklik
+    setShowText(!showText);
   };
   return (
     <div className="overflow-auto zoom-100">
@@ -88,7 +88,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-start w-full px-10 space-y-8">
               <div className="flex items-center w-full justify-between">
                 <div className="text-lg lg:text-custom-24 font-semibold font-nunito">
-                  Flash Sale Hari Ini
+                  Flash Sale Hari Ini!
                 </div>
                 <a href="#">
                   <div className="flex items-center space-x-1 lg:space-x-3 lg:ml-8 cursor-pointer">
@@ -121,14 +121,16 @@ const LandingPage = () => {
                   className="ml-4 w-98px h-55px"
                 />
               </div>
-              <div className="absolute top-52 left-8  w-full h-full">
-                <ProductCard />
+              <div className="absolute top-52 left-8   w-full h-full">
+                <ProductGreenEconomy />
               </div>
             </div>
-            <BannerSection />
+            <div className="mt-16">
+              <BannerSection />
+            </div>
             <div className="mt-10 px-10 space-y-8">
-              <ProductCard />
-              <ProductCard />
+              <ProductLocation />
+              <ProductLocation />
             </div>
             <Banner />
             <div className="text-center text-custom-24 font-nunito font-bold mt-10">
@@ -294,7 +296,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* <FloatingButton /> */}
+      <FloatingButton />
       <Footer />
     </div>
   );
