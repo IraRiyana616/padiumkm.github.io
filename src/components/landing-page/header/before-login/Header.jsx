@@ -2,8 +2,18 @@ import React from 'react';
 import banggaIndonesia from '/src/assets/icons/bangga-indonesia.svg';
 import bumn from '/src/assets/icons/bumn.svg';
 import categoryIcon from '/src/assets/icons/category.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/login');
+  };
+  const handleButtonRegister = () => {
+    navigate('/register');
+  };
+
   return (
     <header className="bg-white">
       <nav className="bg-gray-100 h-9 hidden md:flex">
@@ -84,16 +94,17 @@ const Header = () => {
             </div>
           </div>
           <div className="flex space-x-4">
-            <a href="#">
-              <button className="py-1 px-4 rounded-lg border-2 border-[#0092ac] text-[#0092ac] text-lg font-semibold">
-                Masuk
-              </button>
-            </a>
-            <a href="#">
-              <button className="py-1 px-4 rounded-lg border-2 border-[#0092ac] text-white bg-[#0092ac] text-lg font-semibold">
-                Daftar
-              </button>
-            </a>
+            <button
+              onClick={handleButtonClick}
+              className="py-1 px-4 rounded-lg border-2 border-[#0092ac] text-[#0092ac] text-lg font-semibold">
+              Masuk
+            </button>
+
+            <button
+              onClick={handleButtonRegister}
+              className="py-1 px-4 rounded-lg border-2 border-[#0092ac] text-white bg-[#0092ac] text-lg font-semibold">
+              Daftar
+            </button>
           </div>
         </div>
         <div className="relative block md:hidden mr-3">

@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import InputField from './InputField';
 import DropdownField from './DropdownField';
 
-const BusinessForm = ({ entityOptions, segmentOptions, typeOptions }) => {
+const BusinessFormRole = ({ entityOptions, segmentOptions, typeOptions }) => {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate('/register-role');
+  };
+  const handleNext = () => {
+    navigate('/form');
   };
   const [name, setName] = useState('');
   const [entity, setEntity] = useState('');
@@ -99,11 +102,14 @@ const BusinessForm = ({ entityOptions, segmentOptions, typeOptions }) => {
 
       <div className="w-full mt-7">
         <button
+          onClick={handleNext}
           className={`text-custom-14 w-full py-2.5 border-custom-17 rounded-md flex items-center justify-center transition-colors duration-300 ${
             isFormValid ? 'bg-primary50' : 'bg-gray-300'
           }`}
           disabled={!isFormValid}>
-          <span className="font-semibold font-nunito text-white">Daftar</span>
+          <span className="font-semibold font-nunito text-white">
+            Selanjutnya
+          </span>
         </button>
         {/* Button Kembali  */}
         <div className="w-full mt-4">
@@ -132,4 +138,4 @@ const BusinessForm = ({ entityOptions, segmentOptions, typeOptions }) => {
   );
 };
 
-export default BusinessForm;
+export default BusinessFormRole;

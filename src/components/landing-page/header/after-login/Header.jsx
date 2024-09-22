@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import banggaIndonesia from '/src/assets/icons/bangga-indonesia.svg';
 import bumn from '/src/assets/icons/bumn.svg';
 import categoryIcon from '/src/assets/icons/category.svg';
+import userImage from '/src/assets/images/photo.jpg';
 
 const Header = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <header className="bg-white">
-      <nav className="bg-gray-100 h-9 hidden md:flex">
+      {/* <nav className="bg-gray-100 h-9 hidden md:flex">
         <div className="flex px-[22px] bg-inactive w-full">
-          <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
-            Mitra PaDi UMKM
-          </div>
-          <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
-            Menjadi Penjual
-          </div>
-          <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
-            Info
-          </div>
-          <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
-            Pusat Bantuan
-          </div>
+          {['Mitra PaDi UMKM', 'Menjadi Penjual', 'Info', 'Pusat Bantuan'].map(
+            (item, index) => (
+              <div
+                key={index}
+                className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
+                {item}
+              </div>
+            )
+          )}
         </div>
         <div className="flex px-[22px] bg-inactive space-x-2">
           <div className="flex items-center relative my-2">
@@ -34,22 +38,15 @@ const Header = () => {
             <img alt="Logo BUMN" width={55} height={55} src={bumn} />
           </div>
         </div>
-      </nav>
+      </nav> */}
       <div className="w-full bg-white border-b-2">
-        <div className="w-full flex md:hidden items-start justify-start transition duration-500 ease-in-out bg-white flex-col absolute inset-0 md:py-0 z-[1000] h-screen">
-          <div className="text-sm self-center text-[#6b7280] cursor-pointer">
-            Tutup
-          </div>
-        </div>
         <div className="flex justify-between items-center space-x-4 p-4 w-full">
           <a href="#">
-            <span className="flex items-center justify-center w-full h-full">
-              <img
-                src="/src/assets/icons/logo.svg"
-                alt="padiUMKM"
-                className="w-[98px] h-[55px]"
-              />
-            </span>
+            <img
+              src="/src/assets/icons/logo.svg"
+              alt="padiUMKM"
+              className="w-[98px] h-[55px]"
+            />
           </a>
           <nav className="hidden md:flex items-center justify-center h-full">
             <div className="flex items-center justify-start h-full lg:mr-3">
@@ -64,12 +61,10 @@ const Header = () => {
             </div>
           </nav>
           <div className="relative items-center w-full h-10 px-3 leading-tight hidden sm:flex border-2 rounded-[8px]">
-            <div className="relative w-full h-full">
-              <input
-                className="w-full h-full pl-3 pr-10 focus:outline-none placeholder:text-gray-400 text-sm"
-                placeholder="Cari Produk, jasa, atau vendor"
-              />
-            </div>
+            <input
+              className="w-full h-full pl-3 pr-10 focus:outline-none placeholder:text-gray-400 text-sm"
+              placeholder="Cari Produk, jasa, atau vendor"
+            />
             <div className="absolute right-3 flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,22 +80,48 @@ const Header = () => {
           </div>
           <div className="flex space-x-4">
             <a href="#">
-              <img src="/src/assets/icons/notification.svg" />
+              <img
+                src="/src/assets/icons/notification.svg"
+                alt="Notification"
+              />
             </a>
             <a href="#">
-              <img src="/src/assets/icons/message.svg" />
+              <img src="/src/assets/icons/message.svg" alt="Message" />
             </a>
             <a href="#">
-              <img src="/src/assets/icons/shooping-cart.svg" />
+              <img src="/src/assets/icons/shooping-cart.svg" alt="Cart" />
             </a>
           </div>
-          <div className="flex space-x-4 ">
-            <img
-              src="/src/assets/images/photo.jpg"
-              width="50"
-              height="50"
-              alt="Gambar Account"
-            />
+          <div className="relative flex flex-row">
+            <img src={userImage} alt="User" className="w-8 h-8 rounded-full" />
+            <svg
+              onClick={toggleDropdown}
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 cursor-pointer"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-3 z-10">
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Settings
+                </a>
+                <a
+                  href="/login"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Logout
+                </a>
+              </div>
+            )}
           </div>
         </div>
         <div className="relative block md:hidden mr-3">

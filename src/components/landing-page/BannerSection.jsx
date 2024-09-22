@@ -26,7 +26,7 @@ const BannerSection = () => {
         />
         <div className="absolute bottom-8 left-48 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
           <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
-            Ajukan Sekarang!
+            Coba Sekarang!
           </button>
         </div>
       </div>
@@ -36,9 +36,9 @@ const BannerSection = () => {
           alt="small banner 3"
           className="border-1 rounded-lg shadow-md"
         />
-        <div className="absolute bottom-8 left-8 h-9 px-5 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
+        <div className="absolute bottom-2 left-7  h-9 px-7 bg-zinc-800 rounded-full flex justify-center items-center gap-1">
           <button className="text-white text-custom-12 font-semibold font-nunito leading-none">
-            Ajukan Sekarang!
+            Ajukan Pendanaan!
           </button>
         </div>
       </div>

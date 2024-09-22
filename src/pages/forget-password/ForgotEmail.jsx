@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import validator from 'validator';
+import messageIcon from '/src/assets/icons/message-email.svg';
 import FloatingButton from '../../components/FloatingButton';
+import { useNavigate } from 'react-router-dom';
 
 const FormEmail = () => {
+  const navigate = useNavigate();
+  const handleOnClick = () => {
+    navigate('/login');
+  };
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const handleSendEmail = () => {
+    setIsPopupVisible(true);
+  };
+
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
 
-  // Fungsi Pengecekan Email
   const isEmailValid = (email) => validator.isEmail(email);
 
   const handleEmailChange = (e) => {
@@ -74,18 +85,51 @@ const FormEmail = () => {
                   )}
                 </div>
                 {/* Button Kirim Email */}
-                <div className="w-full  mt-5">
+                <div className="w-full mt-5">
                   <button
                     className={`text-custom-17 w-full py-2.5 ${
                       isFormValid ? 'bg-primary50' : 'bg-gray-300'
                     } text-white rounded-lg`}
                     type="button"
-                    disabled={!isFormValid}>
+                    disabled={!isFormValid}
+                    onClick={handleSendEmail}>
                     <span className="font-semibold font-nunito text-white">
                       Kirim email
                     </span>
                   </button>
                 </div>
+
+                {isPopupVisible && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                    <div className="bg-white rounded-lg p-5">
+                      <div className="flex flex-col items-center justify-center">
+                        <img src={messageIcon} className="w-24 h-24" />
+                        <h2 className="font-semibold mt-4 text-custom-18">
+                          Email telah terkirim!
+                        </h2>
+                        <p className="text-custom-14 text-center mt-5">
+                          Cek email Anda untuk petunjuk lebih lanjut tentang
+                          cara
+                          <p className="text-center">
+                            mereset password. Jangan lupa cek folder spam jika
+                            email kami
+                          </p>
+                          <p className="text-center">
+                            tidak terlihat di inbox Anda.
+                          </p>
+                        </p>
+                      </div>
+
+                      <div className="items-center justify-center flex mb-5">
+                        <button
+                          className="mt-7 bg-primary60 text-white rounded-lg py-2 px-44 "
+                          onClick={handleOnClick}>
+                          Oke
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Opsi telah mengingat password  */}
                 <div className="w-full mt-8 mb-10">

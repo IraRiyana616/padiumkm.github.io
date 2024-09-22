@@ -10,6 +10,9 @@ const RegisterBuyer = () => {
   const handleBack = () => {
     navigate('/register-role');
   };
+  const handleClick = () => {
+    navigate('/login');
+  };
   const {
     name,
     email,
@@ -174,6 +177,7 @@ const RegisterBuyer = () => {
                 {/* Button Kirim Email */}
                 <div className="w-full mt-7">
                   <button
+                    onClick={handleClick}
                     className={`text-custom-17 w-full py-2.5 ${
                       isFormValid ? 'bg-primary50' : 'bg-gray-300'
                     } text-white rounded-lg`}

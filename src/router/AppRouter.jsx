@@ -8,7 +8,9 @@ import RegisterBuyer from '../pages/register/role/RegisterBuyer';
 import RegisterBusiness from '../pages/register/role/RegisterBusiness';
 import FormEmail from '../pages/forget-password/ForgotEmail';
 import Information from '../pages/Information';
-import LandingPage from '../pages/landing-page/before-login/LandingPage';
+import LandingPage from '../pages/LandingPage';
+import Home from '../pages/Home';
+import Form from '../pages/register/role/Form';
 
 export default function AppRouter() {
   const isAuthenticated = true;
@@ -17,17 +19,19 @@ export default function AppRouter() {
     <Routes>
       <Route path="/" element={<Information />} />
       <Route path="/landing-page" element={<LandingPage />} />
-      <Route path="/login" element={<Login />} />
-      {/* <Route
-        path="/"
+      <Route path="/home" element={<Home />} />
+      <Route
+        path="/login"
         element={
           <PrivateRoute isAuthenticated={isAuthenticated}>
             <Login />
           </PrivateRoute>
         }
-      /> */}
+      />
+
       <Route path="/register" element={<Register />} />
       <Route path="/register-role" element={<RegisterRole />} />
+      <Route path="/form" element={<Form />} />
       <Route path="/register-buyer" element={<RegisterBuyer />} />
       <Route path="/register-business" element={<RegisterBusiness />} />
       <Route path="/forgot-password" element={<FormEmail />} />

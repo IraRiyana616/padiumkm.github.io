@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import validator from 'validator';
 
-// Hook untuk mengelola state dan handler fungsi
 export const useFormHandlers = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -82,8 +81,6 @@ export const useFormHandlers = () => {
       alert('Please complete the reCAPTCHA');
       return;
     }
-
-    // Lakukan proses login atau pengiriman formulir di sini
     console.log('Captcha Value:', captchaValue);
   };
 
