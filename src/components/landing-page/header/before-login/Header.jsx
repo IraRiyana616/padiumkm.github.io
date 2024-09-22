@@ -15,7 +15,7 @@ const Header = () => {
             Menjadi Penjual
           </div>
           <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
-            Info
+            <a href="/"> Info</a>
           </div>
           <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
             Pusat Bantuan

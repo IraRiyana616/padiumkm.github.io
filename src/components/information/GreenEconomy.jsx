@@ -7,7 +7,7 @@ import arrow from '/src/assets/icons/arrow-blue.svg';
 
 const GreenEconomy = () => {
   return (
-    <div className="flex flex-row items-center mt-48 px-24">
+    <div className="flex flex-row items-center mt-12 px-24">
       <img src={people} className="mr-24" alt="People" />
       <div className="flex flex-col ">
         <div className="text-custom-30 font-bold">

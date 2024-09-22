@@ -18,7 +18,7 @@ import diskonBanner from '/src/assets/images/diskon-banner.svg';
 import BannerSection from '../../../components/landing-page/BannerSection';
 import Banner from '../../../components/landing-page/Banner';
 import FloatingButton from '../../../components/FloatingButton';
-import Footer from '../../../components/footer/Footer';
+import Footer from '/src/components/Footer';
 
 const LandingPage = () => {
   const [showText, setShowText] = useState(false);
@@ -27,7 +27,7 @@ const LandingPage = () => {
     setShowText(!showText);
   };
   return (
-    <div className="overflow-auto zoom-100">
+    <div className="overflow-auto zoom-100" id="/landing-page">
       <Header />
       <div className="min-h-screen overflow-hidden">
         <div className="relative max-w-screen-2xl mx-auto mt-5">

@@ -1,7 +1,13 @@
 import React from 'react';
 import logo from '/src/assets/icons/logo.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/landing-page');
+  };
   return (
     <header className="w-full bg-white fixed top-0 left-0 right-0">
       <nav className="py-10 lg:px-14 px-4 bg-white">
@@ -63,6 +69,7 @@ const Header = () => {
               </a>
             </li>
             <button
+              onClick={handleButtonClick}
               className="bg-primary50 rounded-lg text-white font-bold font-nunito"
               style={{ height: 40, width: 250 }}>
               Kunjungi Marketplace

@@ -3,7 +3,7 @@ export default {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    'node_modules/flowbite-react/**/*.{js,ts,jsx,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
@@ -27,6 +27,9 @@ export default {
         primary70: '#00557B',
         primary60: '#007293',
         primary50: '#0092AC',
+        primary40: '#55AEBE',
+        primary20: '#97EBEA',
+        primary10: '#D7F3F5',
         textColor: '#667085',
         tertiary80: '#2E3032',
         tertiary60: '#8C8F93',
